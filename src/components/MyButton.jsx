@@ -1,6 +1,10 @@
 import React from "react";
 
 export const MyButton = (props) => {
-  const { children, handleClick } = props;
-  return <button onClick={handleClick}>{children}</button>;
+  const { children, handleClick, type = "button", className } = props;
+  return (
+    <button type={type} className={className} onClick={handleClick}>
+      {children}
+    </button>
+  );
 };
